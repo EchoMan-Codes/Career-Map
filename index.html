@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Garden | Smart Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- BACKGROUND VIDEO -->
+    <video src="Assets/videos/galaxy.mp4" class="bg-video" autoplay muted loop playsinline></video>
+
+    <!-- DARK OVERLAY -->
+    <div class="overlay"></div>
+
+
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <h1 class="loader-title gradient-text">Digital Garden</h1>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p>Sowing the seeds of knowledge...</p>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="container nav-container">
+            <div class="logo gradient-text">
+                <a href="#home">Digital<span class="gradient-text">Garden</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#extra-skills">Extra Skills</a></li>
+            </ul>
+            <button id="get-started-btn" class="btn btn-primary">Get Started</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero / Home Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 style="color: #6070fd;">Cultivate Your <span class="gradient-text">Future</span> in Technology
+                    </h1>
+                    <p>Enter our interactive learning environment. Assess your skills, get a personalized roadmap, and
+                        track your growth in the Digital Garden.</p>
+                    <div class="hero-btns">
+                        <button class="btn btn-primary scroll-link" data-target="onboarding">Start Your Journey</button>
+                        <button class="btn btn-outline scroll-link" data-target="resources">Explore Resources</button>
+                    </div>
+                </div>
+                <!-- Visual placeholder or image will go here -->
+            </div>
+        </section>
+
+        <!-- Onboarding Section -->
+        <section id="onboarding" class="section onboarding-section hidden">
+            <div class="container">
+                <div class="card onboarding-card">
+                    <h2 class="gradient-text">Welcome to the Garden</h2>
+                    <p>Tell us a bit about your goals so we can branch out your perfect roadmap.</p>
+                    <form id="onboarding-form">
+                        <div class="form-group">
+                            <label for="interest">Field of Interest</label>
+                            <select id="interest" required>
+                                <option value="" disabled selected>Select a field...</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="ai">Artificial Intelligence</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="study-time">Daily Study Time (Hours)</label>
+                            <input type="number" id="study-time" min="1" max="24" placeholder="e.g. 2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Experience Level</label>
+                            <select id="experience" required>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Begin Assessment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section quiz-section hidden">
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <h2 id="quiz-topic">Skill Assessment</h2>
+                        <div class="quiz-progress-container">
+                            <div class="quiz-progress-text">Question <span id="current-q">1</span> of <span
+                                    id="total-q">5</span></div>
+                            <div class="progress-bar-bg">
+                                <div id="quiz-bar" class="progress-bar-fill" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="question-card" class="card question-card">
+                        <!-- Question content will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section dashboard-section hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="gradient-text">Your Learning <span class="gradient-text">Dashboard</span></h2>
+                    <p>Track your progress and upcoming milestones.</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card stat-card">
+                        <h3>Knowledge Score</h3>
+                        <div class="score-display">
+                            <span id="knowledge-score">0</span>%
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div id="score-bar" class="progress-bar-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <h3>Overview</h3>
+                        <div class="stat-items">
+                            <div class="stat-item">
+                                <span class="stat-label">Completed Topics</span>
+                                <span id="completed-topics" class="stat-value">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Remaining Topics</span>
+                                <span id="remaining-topics" class="stat-value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="section roadmap-section hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="gradient-text">Your Personalized <span class="gradient-text">Roadmap</span></h2>
+                    <p>A structured path based on your current knowledge and goals.</p>
+                </div>
+                <div id="roadmap-container" class="roadmap-grid">
+                    <!-- Roadmap cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section resources-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="gradient-text">Learning <span class="gradient-text">Resources</span></h2>
+                    <p>Hand-picked materials to bloom your skills.</p>
+                </div>
+                <div id="resources-grid" class="resources-grid">
+                    <!-- Resource cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="section jobs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="gradient-text">Opportunity <span class="gradient-text">Arbor</span></h2>
+                    <p>Discover roles where your new skills can flourish.</p>
+                </div>
+                <div id="jobs-grid" class="jobs-grid">
+                    <!-- Job cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Extra Skills Section -->
+        <section id="extra-skills" class="section extra-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="gradient-text">Beyond the <span class="gradient-text">Root</span></h2>
+                    <p>Complementary activities to sharpen your professional edge.</p>
+                </div>
+                <div id="extra-grid" class="extra-grid">
+                    <!-- Extra cards will be injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">Digital<span class="gradient-text">Garden</span></div>
+            <p>&copy; 2026 Digital Garden. Growing future-ready developers.</p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rohitwakodikar/" target="_blank" class="social-icon linkedin"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin-in iconColor"></i>
+                    <span class="gradient-text">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/rohit_wakodikar_21?igsh=MXMwN3pseWY4eGphOA==" target="_blank"
+                    class="social-icon instagram" title="Instagram">
+                    <i class="fab fa-instagram iconColor"></i>
+                    <span class="gradient-text">Instagram</span>
+                </a>
+                <a href="https://github.com/EchoMan-Codes" target="_blank" class="social-icon github" title="GitHub">
+                    <i class="fab fa-github iconColor"></i>
+                    <span class="gradient-text">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
