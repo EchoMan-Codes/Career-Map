@@ -40,9 +40,30 @@ const FIELD_DATA = {
             { id: 5, title: 'Backend Node.js', desc: 'Express servers, REST APIs, and database basics.' }
         ],
         jobs: [
-            { title: 'Frontend Developer', salary: '₹6L – ₹12L', skills: 'HTML, CSS, React' },
-            { title: 'Full Stack Engineer', salary: '₹10L – ₹18L', skills: 'Node.js, React, Mongo' },
-            { title: 'UI/UX Developer', salary: '₹5L – ₹10L', skills: 'CSS, Figma, JS' }
+            { 
+                title: 'Frontend Developer', 
+                company: 'TechBloom Solutions',
+                location: 'Remote',
+                type: 'Full-time',
+                salary: '₹6L – ₹12L', 
+                skills: ['HTML', 'CSS', 'React'] 
+            },
+            { 
+                title: 'Full Stack Engineer', 
+                company: 'Garden Systems',
+                location: 'Bangalore, IN',
+                type: 'Full-time',
+                salary: '₹10L – ₹18L', 
+                skills: ['Node.js', 'React', 'Mongo'] 
+            },
+            { 
+                title: 'UI/UX Developer', 
+                company: 'Pixel Flora',
+                location: 'Mumbai, IN',
+                type: 'Contract',
+                salary: '₹5L – ₹10L', 
+                skills: ['Figma', 'CSS', 'JS'] 
+            }
         ]
     },
     'ai': {
@@ -82,9 +103,30 @@ const FIELD_DATA = {
             { id: 5, title: 'NLP & Computer Vision', desc: 'Advanced AI applications and libraries.' }
         ],
         jobs: [
-            { title: 'ML Engineer', salary: '₹12L – ₹25L', skills: 'Python, PyTorch, Math' },
-            { title: 'AI Researcher', salary: '₹15L – ₹30L', skills: 'Algorithms, Deep Learning' },
-            { title: 'Data Scientist', salary: '₹10L – ₹20L', skills: 'Statistics, SQL, Python' }
+            { 
+                title: 'ML Engineer', 
+                company: 'Neural Networks Corp',
+                location: 'San Francisco, CA',
+                type: 'Full-time',
+                salary: '₹12L – ₹25L', 
+                skills: ['Python', 'PyTorch', 'Math'] 
+            },
+            { 
+                title: 'AI Researcher', 
+                company: 'Cognitive Lab',
+                location: 'Zurich, CH',
+                type: 'Full-time',
+                salary: '₹15L – ₹30L', 
+                skills: ['Algorithms', 'Deep Learning'] 
+            },
+            { 
+                title: 'Data Scientist', 
+                company: 'Insight Dynamics',
+                location: 'Hybrid',
+                type: 'Full-time',
+                salary: '₹10L – ₹20L', 
+                skills: ['Statistics', 'SQL', 'Python'] 
+            }
         ]
     },
     'data-science': {
@@ -124,9 +166,30 @@ const FIELD_DATA = {
             { id: 5, title: 'Advanced Analytics', desc: 'Big Data tools and Predictive Modeling.' }
         ],
         jobs: [
-            { title: 'Data Analyst', salary: '₹5L – ₹10L', skills: 'Excel, SQL, Tableau' },
-            { title: 'Business Intelligence', salary: '₹8L – ₹15L', skills: 'PowerBI, Statistics' },
-            { title: 'Big Data Engineer', salary: '₹14L – ₹28L', skills: 'Hadoop, Spark, Scala' }
+            { 
+                title: 'Data Analyst', 
+                company: 'DataFlow Inc.',
+                location: 'London, UK',
+                type: 'Full-time',
+                salary: '₹5L – ₹10L', 
+                skills: ['Excel', 'SQL', 'Tableau'] 
+            },
+            { 
+                title: 'Business Intelligence', 
+                company: 'Market Vision',
+                location: 'Remote',
+                type: 'Full-time',
+                salary: '₹8L – ₹15L', 
+                skills: ['PowerBI', 'Statistics'] 
+            },
+            { 
+                title: 'Big Data Engineer', 
+                company: 'Cloud Scale',
+                location: 'New York, US',
+                type: 'Full-time',
+                salary: '₹14L – ₹28L', 
+                skills: ['Hadoop', 'Spark', 'Scala'] 
+            }
         ]
     },
     'cybersecurity': {
@@ -166,9 +229,30 @@ const FIELD_DATA = {
             { id: 5, title: 'Incident Response', desc: 'Digital forensics and threat hunting.' }
         ],
         jobs: [
-            { title: 'Security Analyst', salary: '₹7L – ₹14L', skills: 'Networking, Linux' },
-            { title: 'Pentester', salary: '₹10L – ₹20L', skills: 'Ethical Hacking, Python' },
-            { title: 'Security Architect', salary: '₹18L – ₹35L', skills: 'Network Security, Policy' }
+            { 
+                title: 'Security Analyst', 
+                company: 'Secure Guard',
+                location: 'Singapore, SG',
+                type: 'Full-time',
+                salary: '₹7L – ₹14L', 
+                skills: ['Networking', 'Linux'] 
+            },
+            { 
+                title: 'Pentester', 
+                company: 'Cyber Shield',
+                location: 'Remote',
+                type: 'Contract',
+                salary: '₹10L – ₹20L', 
+                skills: ['Ethical Hacking', 'Python'] 
+            },
+            { 
+                title: 'Security Architect', 
+                company: 'Fortress IT',
+                location: 'Sydney, AU',
+                type: 'Full-time',
+                salary: '₹18L – ₹35L', 
+                skills: ['Network Security', 'Policy'] 
+            }
         ]
     }
 };
@@ -179,14 +263,69 @@ const RESOURCES = [
     { title: 'JS Fundamentals', desc: 'Master variables, functions, and arrays.', type: 'Course' },
     { title: 'AI Ethics 101', desc: 'Exploring the social impact of AI.', type: 'Guide' },
     { title: 'Cyber Defense Basics', desc: 'Protect yourself from online threats.', type: 'Video' },
-    { title: 'Data Cleaning Tips', desc: 'How to handle messy data effectively.', type: 'Course' }
+    { title: 'Data Cleaning Tips', desc: 'How to handle messy data effectively.', type: 'Course' },
+    { title: 'Advance React Patterns', desc: 'Build scalable apps with hooks and context.', type: 'Course' },
+    { title: 'Network Security', desc: 'Deep dive into firewalls and encryption.', type: 'Guide' }
 ];
 
 const EXTRA_SKILLS = [
     { title: 'GitHub Mastery', desc: 'Learn version control and collaboration.' },
     { title: 'Portfolio Design', desc: 'Build a stunning showcase for your work.' },
     { title: 'Technical Writing', desc: 'Document your code like a professional.' },
-    { title: 'Open Source', desc: 'Contribute to global projects and grow.' }
+    { title: 'Open Source', desc: 'Contribute to global projects and grow.' },
+    { title: 'Soft Skills', desc: 'Effective communication for engineers.' },
+    { title: 'Docker Basics', desc: 'Containerize your applications easily.' }
+];
+
+const INITIAL_JOBS = [
+    { 
+        title: 'Senior Frontend Developer', 
+        company: 'CloudStream Systems',
+        location: 'Remote',
+        type: 'Full-time',
+        salary: '₹12L – ₹22L', 
+        skills: ['React', 'TypeScript', 'Tailwind'] 
+    },
+    { 
+        title: 'AI Research Scientist', 
+        company: 'Neural Labs',
+        location: 'Bangalore, IN',
+        type: 'Full-time',
+        salary: '₹18L – ₹35L', 
+        skills: ['Python', 'PyTorch', 'NLP'] 
+    },
+    { 
+        title: 'Cyber Security Analyst', 
+        company: 'Fortress Core',
+        location: 'Hyderabad, IN',
+        type: 'Hybrid',
+        salary: '₹8L – ₹15L', 
+        skills: ['Ethical Hacking', 'Networking'] 
+    },
+    { 
+        title: 'Backend Engineer', 
+        company: 'Ocean Data',
+        location: 'Mumbai, IN',
+        type: 'Contract',
+        salary: '₹10L – ₹18L', 
+        skills: ['Node.js', 'PostgreSQL', 'AWS'] 
+    },
+    { 
+        title: 'Product Designer', 
+        company: 'Bloom Designs',
+        location: 'Bangalore, IN',
+        type: 'Full-time',
+        salary: '₹9L – ₹16L', 
+        skills: ['Figma', 'UI/UX', 'Prototyping'] 
+    },
+    { 
+        title: 'Data Scientist', 
+        company: 'Insight Analytics',
+        location: 'Hybrid',
+        type: 'Full-time',
+        salary: '₹14L – ₹24L', 
+        skills: ['Python', 'SQL', 'Tableau'] 
+    }
 ];
 
 /**
@@ -194,6 +333,26 @@ const EXTRA_SKILLS = [
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Initialize Lenis Smooth Scrolling
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 0.1 Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+
     // 1. Loading Screen
     setTimeout(() => {
         const loader = document.getElementById('loading-screen');
@@ -304,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateScore();
         renderDashboard();
         renderRoadmap();
-        renderJobs();
+        renderJobs(userProfile.selectedFieldData.jobs);
         showResults();
     };
 
@@ -352,16 +511,31 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     };
 
-    const renderJobs = () => {
+    const renderJobs = (jobsData) => {
         const jobsGrid = document.getElementById('jobs-grid');
-        const jobsData = userProfile.selectedFieldData.jobs;
+        
+        if (!jobsData || jobsData.length === 0) {
+            jobsGrid.innerHTML = '<p class="no-data">No jobs found matching your criteria.</p>';
+            return;
+        }
 
         jobsGrid.innerHTML = jobsData.map(job => `
             <div class="card job-card">
-                <span class="card-tag">Ready in 3-6 Months</span>
-                <h3>${job.title}</h3>
-                <p>Required: ${job.skills}</p>
-                <div class="card-meta">Est. Salary: ${job.salary}</div>
+                <div class="job-header">
+                    <span class="job-type-tag">${job.type}</span>
+                    <span class="job-salary-tag">${job.salary}</span>
+                </div>
+                <h3 class="job-title">${job.title}</h3>
+                <div class="job-company">
+                    <i class="fas fa-building"></i> ${job.company}
+                </div>
+                <div class="job-location">
+                    <i class="fas fa-map-marker-alt"></i> ${job.location}
+                </div>
+                <div class="job-skills">
+                    ${job.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                </div>
+                <button class="btn btn-outline btn-block job-apply-btn">Apply Now</button>
             </div>
         `).join('');
     };
@@ -392,6 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderResources();
     renderExtraSkills();
+    renderJobs(INITIAL_JOBS);
 
     // Smooth Scrolling for data-target buttons
     document.querySelectorAll('.scroll-link').forEach(link => {
